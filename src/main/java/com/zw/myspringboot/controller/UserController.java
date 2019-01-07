@@ -7,17 +7,12 @@ import com.zw.myspringboot.entity.User;
 import com.zw.myspringboot.service.IUserService;
 import com.zw.myspringboot.utils.redis.RedissonUtils;
 import org.redisson.api.RBucket;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
-@Controller
-@RequestMapping("/user")
+@RestController
+@RequestMapping("user")
 public class UserController {
     @Resource
     private RedissonUtils redissonUtils;
